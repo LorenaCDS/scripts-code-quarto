@@ -2,7 +2,7 @@
 title: "Homework: Finding Your Way in R and Python"
 execute:
   error: true
-author: "Your Name"
+author: "Lorena Dumba"
 output: html_document
 ---
 
@@ -36,6 +36,14 @@ Use the chunk below to define variables $a$, $b$, and $c$, where you define the 
 ```{r pythagorean-theorem-r}
 # Your pythagorean theorem code goes here
 
+# Define variables 
+a <- 7 
+b <- 2 
+# Calculate 
+c <- sqrt(a^2 + b^2) 
+# Result 
+c
+
 ```
 
 ## Quadratic Formula in Python
@@ -46,6 +54,19 @@ Use the chunk below to define variables $a$, $b$, and $c$, and then define $x1$ 
 
 ```{python quad-formula-py}
 # Your quadratic formula code goes here
+
+import math 
+# Define variables 
+a = 2 
+b = -2 
+c = 2 
+# Discriminant 
+discriminant = b**2 - 4*a*c 
+# Values for x 
+x1 = (-b + math.sqrt(discriminant)) / (2*a) 
+x2 = (-b - math.sqrt(discriminant)) / (2*a) 
+# Results 
+print(f"The roots of the equation are x1 = {x1} and x2 = {x2}")
 
 ```
 
@@ -74,11 +95,24 @@ salary
 
 ------------------------------------------------------------------------
 
-The problem with the data is:
+The problem with the data is: that the Salary column is not being read as numeric because it contains a mix of numeric values and strings with special characters like the dollar sign and comma.
 
-Here is how I solved the problem:
+Here is how I solved the problem: I removed the dollar sign ($) and comma (,) from the salary values and converted the salary column to numeric.
+
 
 ```{r cleaning-the-data-r}
 # Your implementation code goes here
+# Remove the dollar sign and comma from the salary column 
+salary$Salary <- gsub("\\$", "", salary$Salary)
+salary$Salary <- gsub(",", "", salary$Salary) 
+salary$Salary <- as.numeric(salary$Salary) 
+library(ggplot2) 
+ggplot(salary, aes(x = Hire.Year, y = Salary, label = Name)) + geom_label() + labs(title = "Salary vs. Hire Year", x = "Hire Year", y = "Salary ($)") + theme_minimal()
+
 
 ```
+
+# Extra point
+Fix the problem and then explain the output.
+
+
