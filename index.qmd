@@ -55,18 +55,22 @@ Use the chunk below to define variables $a$, $b$, and $c$, and then define $x1$ 
 ```{python quad-formula-py}
 # Your quadratic formula code goes here
 
-import math 
-# Define variables 
-a = 2 
-b = -2 
-c = 2 
-# Discriminant 
-discriminant = b**2 - 4*a*c 
-# Values for x 
-x1 = (-b + math.sqrt(discriminant)) / (2*a) 
-x2 = (-b - math.sqrt(discriminant)) / (2*a) 
-# Results 
-print(f"The roots of the equation are x1 = {x1} and x2 = {x2}")
+import math
+
+# Define the variables
+a = 1  
+b = -5  
+c = 6 
+
+# Discriminant
+discriminant = b**2 - 4*a*c
+
+# Values for x
+x1 = (-b + math.sqrt(discriminant)) / (2*a)
+x2 = (-b - math.sqrt(discriminant)) / (2*a)
+
+# Result
+print("Roots are x1 =", x1, "and x2 =", x2)
 
 ```
 
