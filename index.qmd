@@ -115,4 +115,5 @@ ggplot(salary, aes(x = Hire.Year, y = Salary, label = Name)) + geom_label() + la
 # Extra point
 Fix the problem and then explain the output.
 
+The dollar sign and commas are non-numeric. When present in the Salary column, R reads the entire column as a  vector instead of a numeric vector. Now the Salary column display correctly, showing the salary values as numbers.
 
