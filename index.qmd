@@ -18,7 +18,15 @@ Consider the 6 counting words examples in the [textbook module](https://srvander
 
 ---
 
-Replace this line of text with your 2-3 sentences about script-mode, interactive mode, and command-line mode in R and Python
+Sentence 1: Your Turn - Interactive Mode
+Interactive mode provides immediate feedback. Sum 2+2 makes us get the same results in R or in Python, but the way to get these results and how the results are shown are different. We see the R have one ‘>’ and Python have ’>>>’. Also, we needed to type Python in terminal to use it, but R we use the console.
+
+Sentence 2: Your Turn - Terminal Mode
+Terminal mode is ideal for running entire scripts with command-line input/output. In this case the process in R is also simpler than in Python. Additionally, the message in R is more complete.
+
+Sentence 3: Your Turn - Script Mode
+In the tab is possible to see a symbol that indicates it is a Python script or R script. In Python have some words as ‘in’, ‘for’ in blue, and in R ‘#’ that indicates comments.
+
 
 ---
 
